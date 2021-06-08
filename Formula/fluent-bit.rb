@@ -26,10 +26,16 @@ class FluentBit < Formula
     depends_on "openssl@1.1"
   end
 
-  # Apply https://github.com/fluent/fluent-bit/pull/3564 to build on M1
+  # Apply https://github.com/fluent/fluent-bit/pull/3610 to build on M1
   patch do
-    url "https://github.com/fluent/fluent-bit/commit/fcdf304e5abc3e3b66b1acac76dbaf23b2d22579.patch?full_index=1"
-    sha256 "80d1b0b6916ff1e0c157e6824afa769f08e28e764f65bfd28df0900d6f9bda1e"
+    url "https://github.com/fluent/fluent-bit/commit/6061594b42539aec688dd1171df8e843cbcce5a3.patch?full_index=1"
+    sha256 "f190e55a3a6d9ff1affa0ce9160409c3a87051be1eb49308bc15c02717803a2c"
+  end
+
+  # Apply https://github.com/fluent/fluent-bit/pull/3611 to build on M1
+  patch do
+    url "https://github.com/fluent/fluent-bit/commit/d84d5c86961860338af38d656e8b6697736a1dcc.patch?full_index=1"
+    sha256 "4554ed2a94c0d119e43e09fa28ab93eb75742f86026633cc1a04742b5c3c2d26"
   end
 
   def install
